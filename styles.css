@@ -1,3 +1,4 @@
+/* Base layout */
 body {
   margin: 0;
   padding: 0;
@@ -7,16 +8,42 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: white;
-  font-family: monospace;
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
+
+/* Text appearance */
 .gate-message {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
   border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  max-width: 600px;
   text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+.gate-message p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #cccccc;
+  text-shadow: 0 0 5px #ffffff22;
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
